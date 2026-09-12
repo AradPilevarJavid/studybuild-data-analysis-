@@ -19,10 +19,12 @@
 | Policies with Claims | 34,060 (5.0%) |
 | Claim Frequency | 0.1007 (per exposure year) |
 | Total Claim Cost | €59,909,216 |
-| Average Claim Severity | €1,759 (per policy with claims) |
+| Average Claim Severity | €2,249 (per observed claim) |
 | Cost per Exposure Year | €167 |
 
 **Why raw claim counts are misleading:** A region or segment with more policies and/or longer exposure naturally accumulates more claims even if the underlying risk profile is identical. Claim frequency (claims per unit of exposure) normalises for this and enables fair comparison.
+
+> **Severity note:** Average Claim Severity = Total Claim Cost / Number of observed claims (26,639 individual claim records from the severity table). The denominator is the count of individual claims, not the count of policies with claims (34,060). This ensures the metric represents average cost **per observed claim**.
 
 ---
 

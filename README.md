@@ -67,7 +67,7 @@ This is a **descriptive analytics / BI project**, not a pricing or underwriting 
 | Claim Count | `sum(ClaimNb)` | Total number of claims |
 | Claim Frequency | `Claim Count / Exposure` | Claims per exposure year (exposure-adjusted) |
 | Total Claim Cost | `sum(ClaimAmount)` | Sum of all claim amounts |
-| Avg Claim Severity | `Total Claim Cost / Policies with Claims` | Average cost per claim-producing policy |
+| Avg Claim Severity | `Total Claim Cost / Number of observed claims` | Average cost per observed claim (denominator = row count of severity table, i.e. individual claim records) |
 
 **Note:** Loss Ratio is **not** calculated because written premium is not available in this dataset.
 
@@ -78,7 +78,8 @@ This is a **descriptive analytics / BI project**, not a pricing or underwriting 
 1. **Frequency table:** 678,013 rows, no duplicates, no missing values
 2. **Severity table:** 26,639 rows, aggregated to policy level (sum of ClaimAmount per policy → 24,950 unique policies)
 3. **Merge:** Left join from frequency on `IDpol` — all 678,013 policies preserved; severity data filled with 0 for policies without claims
-4. **Segments engineered:** Driver Age Group, Vehicle Age Group, Vehicle Power Group, Bonus-Malus Category, Density Group
+4. **Average Claim Severity:** Computed as `TotalClaimCost / NumIndividualClaims` where `NumIndividualClaims` = row count of the severity table (26,639). This gives average cost **per observed claim**, not per policy. The severity table has one row per individual claim; some policies appear multiple times if they had multiple claims.
+5. **Segments engineered:** Driver Age Group, Vehicle Age Group, Vehicle Power Group, Bonus-Malus Category, Density Group
 5. **No data deleted:** Zero-exposure rows and negative ClaimNb rows were checked but none found in the clean dataset
 
 ---
@@ -184,16 +185,16 @@ insurance-claims-dashboard/
 │       ├── tableau_segment_analysis.csv         # Segment-level analysis
 │       ├── tableau_individual_claims.csv        # Claims for Pareto analysis
 │       └── tableau_portfolio_kpi.csv            # Portfolio KPI summary
-├── figures/
+├── figures/                                     # Matplotlib preview charts (design specs for Tableau)
 │   ├── q2_regional_comparison.png               # Regional KPI comparison
 │   ├── q3_segment_patterns.png                  # Segment analysis charts
 │   ├── q4_frequency_vs_severity.png             # Scatter/quadrant view
 │   ├── q5_pareto_analysis.png                   # Pareto cost concentration
 │   ├── q6_claim_distribution.png                # Claim amount distribution
-│   └── q7_executive_dashboard.png               # Dashboard mockup
+│   └── q7_executive_dashboard_preview.png       # Dashboard layout preview
 ├── report/
 │   └── business_summary.md                      # Business summary
-└── tableau/                                     # Tableau workbook (to be created)
+└── tableau/                                     # Tableau workbook (build using exported CSVs)
 ```
 
 ---
@@ -219,10 +220,10 @@ insurance-claims-dashboard/
 4. The notebook will:
    - Load and clean the raw data
    - Perform all Q1–Q8 analyses
-   - Generate figures in `figures/`
+   - Generate matplotlib preview charts in `figures/` (design specifications)
    - Export Tableau-ready CSVs to `data_/processed/`
 
-5. Open the processed CSVs in Tableau Public or Tableau Desktop to build the dashboard.
+5. Open the processed CSVs in Tableau Public or Tableau Desktop to build the interactive 3-page dashboard (see Q7 in notebook for chart specifications).
 
 ---
 
