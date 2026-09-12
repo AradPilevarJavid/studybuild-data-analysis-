@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<workbook source-build="2024.1.0" source-platform="win" version="18.1">
+  <preferences />
+  <datasources>
+    <datasource caption="tableau_policy_level" inline="true" name="federated.tableau_policy_level" source="textscan" version="18.1">
+      <connection catalog="" directory="../data_/processed" filename="tableau_policy_level.csv" password="" server="" username="" workspace="">
+        <relation name="tableau_policy_level" table="tableau_policy_level.csv" type="table" />
+      </connection>
+      <column caption="IDpol" datatype="integer" name="[tableau_policy_level].[IDpol]" role="measure" type="quantitative" />
+      <column caption="ClaimNb" datatype="integer" name="[tableau_policy_level].[ClaimNb]" role="measure" type="quantitative" />
+      <column caption="Exposure" datatype="real" name="[tableau_policy_level].[Exposure]" role="measure" type="quantitative" format="$#,##0.00" />
+      <column caption="VehPower" datatype="integer" name="[tableau_policy_level].[VehPower]" role="measure" type="quantitative" />
+      <column caption="VehAge" datatype="integer" name="[tableau_policy_level].[VehAge]" role="measure" type="quantitative" />
+      <column caption="DrivAge" datatype="integer" name="[tableau_policy_level].[DrivAge]" role="measure" type="quantitative" />
+      <column caption="BonusMalus" datatype="integer" name="[tableau_policy_level].[BonusMalus]" role="measure" type="quantitative" />
+      <column caption="VehBrand" datatype="string" name="[tableau_policy_level].[VehBrand]" role="dimension" type="nominal" />
+      <column caption="VehGas" datatype="string" name="[tableau_policy_level].[VehGas]" role="dimension" type="nominal" />
+      <column caption="Area" datatype="string" name="[tableau_policy_level].[Area]" role="dimension" type="nominal" />
+      <column caption="Density" datatype="integer" name="[tableau_policy_level].[Density]" role="measure" type="quantitative" />
+      <column caption="Region" datatype="string" name="[tableau_policy_level].[Region]" role="dimension" type="nominal" />
+      <column caption="TotalClaimCost" datatype="real" name="[tableau_policy_level].[TotalClaimCost]" role="measure" type="quantitative" format="$#,##0.00" />
+      <column caption="MaxClaimAmount" datatype="real" name="[tableau_policy_level].[MaxClaimAmount]" role="measure" type="quantitative" format="$#,##0.00" />
+      <column caption="MeanClaimAmount" datatype="real" name="[tableau_policy_level].[MeanClaimAmount]" role="measure" type="quantitative" format="$#,##0.00" />
+      <column caption="DrivAgeGroup" datatype="string" name="[tableau_policy_level].[DrivAgeGroup]" role="dimension" type="nominal" />
+      <column caption="VehAgeGroup" datatype="string" name="[tableau_policy_level].[VehAgeGroup]" role="dimension" type="nominal" />
+      <column caption="VehPowerGroup" datatype="string" name="[tableau_policy_level].[VehPowerGroup]" role="dimension" type="nominal" />
+      <column caption="BonusMalusCat" datatype="string" name="[tableau_policy_level].[BonusMalusCat]" role="dimension" type="nominal" />
+      <column caption="DensityGroup" datatype="string" name="[tableau_policy_level].[DensityGroup]" role="dimension" type="nominal" />
+    </datasource>
+    <datasource caption="tableau_regional_kpi" inline="true" name="federated.tableau_regional_kpi" source="textscan" version="18.1">
+      <connection catalog="" directory="../data_/processed" filename="tableau_regional_kpi.csv" password="" server="" username="" workspace="">
+        <relation name="tableau_regional_kpi" table="tableau_regional_kpi.csv" type="table" />
+      </connection>
+      <column caption="Region" datatype="string" name="[tableau_regional_kpi].[Region]" role="dimension" type="nominal" />
+      <column caption="PolicyCount" datatype="integer" name="[tableau_regional_kpi].[PolicyCount]" role="measure" type="quantitative" />
+      <column caption="TotalExposure" datatype="real" name="[tableau_regional_kpi].[TotalExposure]" role="measure" type="quantitative" format="$#,##0.00" />
+      <column caption="TotalClaims" datatype="integer" name="[tableau_regional_kpi].[TotalClaims]" role="measure" type="quantitative" />
+      <column caption="ClaimFrequency" datatype="real" name="[tableau_regional_kpi].[ClaimFrequency]" role="measure" type="quantitative" format="$#,##0.00" />
+      <column caption="TotalClaimCost" datatype="real" name="[tableau_regional_kpi].[TotalClaimCost]" role="measure" type="quantitative" format="$#,##0.00" />
+      <column caption="AvgSeverity" datatype="real" name="[tableau_regional_kpi].[AvgSeverity]" role="measure" type="quantitative" format="$#,##0.00" />
+      <column caption="CostPerExposure" datatype="real" name="[tableau_regional_kpi].[CostPerExposure]" role="measure" type="quantitative" format="$#,##0.00" />
+    </datasource>
+    <datasource caption="tableau_segment_analysis" inline="true" name="federated.tableau_segment_analysis" source="textscan" version="18.1">
+      <connection catalog="" directory="../data_/processed" filename="tableau_segment_analysis.csv" password="" server="" username="" workspace="">
+        <relation name="tableau_segment_analysis" table="tableau_segment_analysis.csv" type="table" />
+      </connection>
+      <column caption="Segment" datatype="string" name="[tableau_segment_analysis].[Segment]" role="dimension" type="nominal" />
+      <column caption="PolicyCount" datatype="integer" name="[tableau_segment_analysis].[PolicyCount]" role="measure" type="quantitative" />
+      <column caption="TotalExposure" datatype="real" name="[tableau_segment_analysis].[TotalExposure]" role="measure" type="quantitative" format="$#,##0.00" />
+      <column caption="TotalClaims" datatype="integer" name="[tableau_segment_analysis].[TotalClaims]" role="measure" type="quantitative" />
+      <column caption="TotalClaimCost" datatype="real" name="[tableau_segment_analysis].[TotalClaimCost]" role="measure" type="quantitative" format="$#,##0.00" />
+      <column caption="PoliciesWithClaims" datatype="integer" name="[tableau_segment_analysis].[PoliciesWithClaims]" role="measure" type="quantitative" />
+      <column caption="ClaimFrequency" datatype="real" name="[tableau_segment_analysis].[ClaimFrequency]" role="measure" type="quantitative" format="$#,##0.00" />
+      <column caption="AvgSeverity" datatype="real" name="[tableau_segment_analysis].[AvgSeverity]" role="measure" type="quantitative" format="$#,##0.00" />
+      <column caption="CostPerExposure" datatype="real" name="[tableau_segment_analysis].[CostPerExposure]" role="measure" type="quantitative" format="$#,##0.00" />
+      <column caption="SegmentType" datatype="string" name="[tableau_segment_analysis].[SegmentType]" role="dimension" type="nominal" />
+    </datasource>
+    <datasource caption="tableau_individual_claims" inline="true" name="federated.tableau_individual_claims" source="textscan" version="18.1">
+      <connection catalog="" directory="../data_/processed" filename="tableau_individual_claims.csv" password="" server="" username="" workspace="">
+        <relation name="tableau_individual_claims" table="tableau_individual_claims.csv" type="table" />
+      </connection>
+      <column caption="IDpol" datatype="integer" name="[tableau_individual_claims].[IDpol]" role="measure" type="quantitative" />
+      <column caption="ClaimAmount" datatype="real" name="[tableau_individual_claims].[ClaimAmount]" role="measure" type="quantitative" format="$#,##0.00" />
+      <column caption="CumCost" datatype="real" name="[tableau_individual_claims].[CumCost]" role="measure" type="quantitative" format="$#,##0.00" />
+      <column caption="CumCostPct" datatype="real" name="[tableau_individual_claims].[CumCostPct]" role="measure" type="quantitative" format="$#,##0.00" />
+      <column caption="ClaimRank" datatype="integer" name="[tableau_individual_claims].[ClaimRank]" role="measure" type="quantitative" />
+      <column caption="ClaimRankPct" datatype="real" name="[tableau_individual_claims].[ClaimRankPct]" role="measure" type="quantitative" format="$#,##0.00" />
+    </datasource>
+    <datasource caption="tableau_portfolio_kpi" inline="true" name="federated.tableau_portfolio_kpi" source="textscan" version="18.1">
+      <connection catalog="" directory="../data_/processed" filename="tableau_portfolio_kpi.csv" password="" server="" username="" workspace="">
+        <relation name="tableau_portfolio_kpi" table="tableau_portfolio_kpi.csv" type="table" />
+      </connection>
+      <column caption="KPI" datatype="string" name="[tableau_portfolio_kpi].[KPI]" role="dimension" type="nominal" />
+      <column caption="Value" datatype="real" name="[tableau_portfolio_kpi].[Value]" role="measure" type="quantitative" format="$#,##0.00" />
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name="KPI_Cards">
+      <view alignment="top" class="viewsheet" enable-summary="true" name="KPI_Cards">
+        <datasources>
+          <datasource caption="Portfolio Kpi" name="federated.tableau_portfolio_kpi" />
+        </datasources>
+      </view>
+      <field-info>
+        <field name="[tableau_portfolio_kpi].[KPI]" caption="KPI" datatype="string" />
+        <field name="[tableau_portfolio_kpi].[Value]" caption="Value" datatype="real" />
+      </field-info>
+    </worksheet>
+    <worksheet name="Regional_Frequency_Bar">
+      <view alignment="top" class="viewsheet" enable-summary="true" name="Regional_Frequency_Bar">
+        <datasources>
+          <datasource caption="Regional Kpi" name="federated.tableau_regional_kpi" />
+        </datasources>
+      </view>
+      <field-info>
+        <field name="[tableau_regional_kpi].[Region]" caption="Region" datatype="string" />
+        <field name="[tableau_regional_kpi].[ClaimFrequency]" caption="ClaimFrequency" datatype="real" />
+        <field name="[tableau_regional_kpi].[PolicyCount]" caption="PolicyCount" datatype="integer" />
+        <field name="[tableau_regional_kpi].[TotalExposure]" caption="TotalExposure" datatype="real" />
+        <field name="[tableau_regional_kpi].[TotalClaimCost]" caption="TotalClaimCost" datatype="real" />
+        <field name="[tableau_regional_kpi].[AvgSeverity]" caption="AvgSeverity" datatype="real" />
+        <field name="[tableau_regional_kpi].[CostPerExposure]" caption="CostPerExposure" datatype="real" />
+      </field-info>
+      <sort column="[tableau_regional_kpi].[ClaimFrequency]" direction="desc" />
+      <reference-lines>
+        <reference-line class="constant" value="0.1007" />
+      </reference-lines>
+    </worksheet>
+    <worksheet name="Regional_Severity_Bar">
+      <view alignment="top" class="viewsheet" enable-summary="true" name="Regional_Severity_Bar">
+        <datasources>
+          <datasource caption="Regional Kpi" name="federated.tableau_regional_kpi" />
+        </datasources>
+      </view>
+      <field-info>
+        <field name="[tableau_regional_kpi].[Region]" caption="Region" datatype="string" />
+        <field name="[tableau_regional_kpi].[AvgSeverity]" caption="AvgSeverity" datatype="real" />
+        <field name="[tableau_regional_kpi].[CostPerExposure]" caption="CostPerExposure" datatype="real" />
+      </field-info>
+      <sort column="[tableau_regional_kpi].[AvgSeverity]" direction="desc" />
+    </worksheet>
+    <worksheet name="Driver_Age_Frequency">
+      <view alignment="top" class="viewsheet" enable-summary="true" name="Driver_Age_Frequency">
+        <datasources>
+          <datasource caption="Segment Analysis" name="federated.tableau_segment_analysis" />
+        </datasources>
+      </view>
+      <field-info>
+        <field name="[tableau_segment_analysis].[Segment]" caption="Segment" datatype="string" />
+        <field name="[tableau_segment_analysis].[SegmentType]" caption="SegmentType" datatype="string" />
+        <field name="[tableau_segment_analysis].[ClaimFrequency]" caption="ClaimFrequency" datatype="real" />
+        <field name="[tableau_segment_analysis].[AvgSeverity]" caption="AvgSeverity" datatype="real" />
+        <field name="[tableau_segment_analysis].[PolicyCount]" caption="PolicyCount" datatype="integer" />
+        <field name="[tableau_segment_analysis].[TotalExposure]" caption="TotalExposure" datatype="real" />
+      </field-info>
+      <sort column="[tableau_segment_analysis].[ClaimFrequency]" direction="desc" />
+      <filters>
+        <filter class="categorical" column="[tableau_segment_analysis].[SegmentType]" value="DrivAgeGroup" />
+      </filters>
+    </worksheet>
+    <worksheet name="Driver_Age_Severity">
+      <view alignment="top" class="viewsheet" enable-summary="true" name="Driver_Age_Severity">
+        <datasources>
+          <datasource caption="Segment Analysis" name="federated.tableau_segment_analysis" />
+        </datasources>
+      </view>
+      <field-info>
+        <field name="[tableau_segment_analysis].[Segment]" caption="Segment" datatype="string" />
+        <field name="[tableau_segment_analysis].[SegmentType]" caption="SegmentType" datatype="string" />
+        <field name="[tableau_segment_analysis].[AvgSeverity]" caption="AvgSeverity" datatype="real" />
+        <field name="[tableau_segment_analysis].[ClaimFrequency]" caption="ClaimFrequency" datatype="real" />
+        <field name="[tableau_segment_analysis].[PolicyCount]" caption="PolicyCount" datatype="integer" />
+      </field-info>
+      <sort column="[tableau_segment_analysis].[AvgSeverity]" direction="desc" />
+      <filters>
+        <filter class="categorical" column="[tableau_segment_analysis].[SegmentType]" value="DrivAgeGroup" />
+      </filters>
+    </worksheet>
+    <worksheet name="Vehicle_Age_Frequency">
+      <view alignment="top" class="viewsheet" enable-summary="true" name="Vehicle_Age_Frequency">
+        <datasources>
+          <datasource caption="Segment Analysis" name="federated.tableau_segment_analysis" />
+        </datasources>
+      </view>
+      <field-info>
+        <field name="[tableau_segment_analysis].[Segment]" caption="Segment" datatype="string" />
+        <field name="[tableau_segment_analysis].[SegmentType]" caption="SegmentType" datatype="string" />
+        <field name="[tableau_segment_analysis].[ClaimFrequency]" caption="ClaimFrequency" datatype="real" />
+        <field name="[tableau_segment_analysis].[AvgSeverity]" caption="AvgSeverity" datatype="real" />
+        <field name="[tableau_segment_analysis].[PolicyCount]" caption="PolicyCount" datatype="integer" />
+      </field-info>
+      <sort column="[tableau_segment_analysis].[ClaimFrequency]" direction="desc" />
+      <filters>
+        <filter class="categorical" column="[tableau_segment_analysis].[SegmentType]" value="VehAgeGroup" />
+      </filters>
+    </worksheet>
+    <worksheet name="Vehicle_Age_Severity">
+      <view alignment="top" class="viewsheet" enable-summary="true" name="Vehicle_Age_Severity">
+        <datasources>
+          <datasource caption="Segment Analysis" name="federated.tableau_segment_analysis" />
+        </datasources>
+      </view>
+      <field-info>
+        <field name="[tableau_segment_analysis].[Segment]" caption="Segment" datatype="string" />
+        <field name="[tableau_segment_analysis].[SegmentType]" caption="SegmentType" datatype="string" />
+        <field name="[tableau_segment_analysis].[AvgSeverity]" caption="AvgSeverity" datatype="real" />
+        <field name="[tableau_segment_analysis].[ClaimFrequency]" caption="ClaimFrequency" datatype="real" />
+        <field name="[tableau_segment_analysis].[PolicyCount]" caption="PolicyCount" datatype="integer" />
+      </field-info>
+      <sort column="[tableau_segment_analysis].[AvgSeverity]" direction="desc" />
+      <filters>
+        <filter class="categorical" column="[tableau_segment_analysis].[SegmentType]" value="VehAgeGroup" />
+      </filters>
+    </worksheet>
+    <worksheet name="Freq_vs_Severity_Scatter">
+      <view alignment="top" class="viewsheet" enable-summary="true" name="Freq_vs_Severity_Scatter">
+        <datasources>
+          <datasource caption="Regional Kpi" name="federated.tableau_regional_kpi" />
+        </datasources>
+      </view>
+      <field-info>
+        <field name="[tableau_regional_kpi].[Region]" caption="Region" datatype="string" />
+        <field name="[tableau_regional_kpi].[ClaimFrequency]" caption="ClaimFrequency" datatype="real" />
+        <field name="[tableau_regional_kpi].[AvgSeverity]" caption="AvgSeverity" datatype="real" />
+        <field name="[tableau_regional_kpi].[PolicyCount]" caption="PolicyCount" datatype="integer" />
+        <field name="[tableau_regional_kpi].[CostPerExposure]" caption="CostPerExposure" datatype="real" />
+      </field-info>
+    </worksheet>
+    <worksheet name="Segment_Freq_vs_Sev">
+      <view alignment="top" class="viewsheet" enable-summary="true" name="Segment_Freq_vs_Sev">
+        <datasources>
+          <datasource caption="Segment Analysis" name="federated.tableau_segment_analysis" />
+        </datasources>
+      </view>
+      <field-info>
+        <field name="[tableau_segment_analysis].[Segment]" caption="Segment" datatype="string" />
+        <field name="[tableau_segment_analysis].[SegmentType]" caption="SegmentType" datatype="string" />
+        <field name="[tableau_segment_analysis].[ClaimFrequency]" caption="ClaimFrequency" datatype="real" />
+        <field name="[tableau_segment_analysis].[AvgSeverity]" caption="AvgSeverity" datatype="real" />
+        <field name="[tableau_segment_analysis].[PolicyCount]" caption="PolicyCount" datatype="integer" />
+        <field name="[tableau_segment_analysis].[CostPerExposure]" caption="CostPerExposure" datatype="real" />
+      </field-info>
+      <sort column="[tableau_segment_analysis].[ClaimFrequency]" direction="desc" />
+    </worksheet>
+    <worksheet name="Pareto_Chart">
+      <view alignment="top" class="viewsheet" enable-summary="true" name="Pareto_Chart">
+        <datasources>
+          <datasource caption="Individual Claims" name="federated.tableau_individual_claims" />
+        </datasources>
+      </view>
+      <field-info>
+        <field name="[tableau_individual_claims].[ClaimAmount]" caption="ClaimAmount" datatype="real" />
+        <field name="[tableau_individual_claims].[CumCost]" caption="CumCost" datatype="real" />
+        <field name="[tableau_individual_claims].[CumCostPct]" caption="CumCostPct" datatype="real" />
+        <field name="[tableau_individual_claims].[ClaimRank]" caption="ClaimRank" datatype="integer" />
+        <field name="[tableau_individual_claims].[ClaimRankPct]" caption="ClaimRankPct" datatype="real" />
+        <field name="[tableau_individual_claims].[IDpol]" caption="IDpol" datatype="integer" />
+      </field-info>
+    </worksheet>
+    <worksheet name="Top_Claims_Table">
+      <view alignment="top" class="viewsheet" enable-summary="true" name="Top_Claims_Table">
+        <datasources>
+          <datasource caption="Individual Claims" name="federated.tableau_individual_claims" />
+        </datasources>
+      </view>
+      <field-info>
+        <field name="[tableau_individual_claims].[IDpol]" caption="IDpol" datatype="integer" />
+        <field name="[tableau_individual_claims].[ClaimAmount]" caption="ClaimAmount" datatype="real" />
+        <field name="[tableau_individual_claims].[CumCost]" caption="CumCost" datatype="real" />
+        <field name="[tableau_individual_claims].[CumCostPct]" caption="CumCostPct" datatype="real" />
+        <field name="[tableau_individual_claims].[ClaimRank]" caption="ClaimRank" datatype="integer" />
+        <field name="[tableau_individual_claims].[ClaimRankPct]" caption="ClaimRankPct" datatype="real" />
+      </field-info>
+    </worksheet>
+    <worksheet name="Cost_Distribution_Region">
+      <view alignment="top" class="viewsheet" enable-summary="true" name="Cost_Distribution_Region">
+        <datasources>
+          <datasource caption="Regional Kpi" name="federated.tableau_regional_kpi" />
+        </datasources>
+      </view>
+      <field-info>
+        <field name="[tableau_regional_kpi].[Region]" caption="Region" datatype="string" />
+        <field name="[tableau_regional_kpi].[TotalClaimCost]" caption="TotalClaimCost" datatype="real" />
+        <field name="[tableau_regional_kpi].[AvgSeverity]" caption="AvgSeverity" datatype="real" />
+        <field name="[tableau_regional_kpi].[CostPerExposure]" caption="CostPerExposure" datatype="real" />
+        <field name="[tableau_regional_kpi].[ClaimFrequency]" caption="ClaimFrequency" datatype="real" />
+      </field-info>
+    </worksheet>
+    <worksheet name="Highlight_Table">
+      <view alignment="top" class="viewsheet" enable-summary="true" name="Highlight_Table">
+        <datasources>
+          <datasource caption="Regional Kpi" name="federated.tableau_regional_kpi" />
+        </datasources>
+      </view>
+      <field-info>
+        <field name="[tableau_regional_kpi].[Region]" caption="Region" datatype="string" />
+        <field name="[tableau_regional_kpi].[ClaimFrequency]" caption="ClaimFrequency" datatype="real" />
+        <field name="[tableau_regional_kpi].[AvgSeverity]" caption="AvgSeverity" datatype="real" />
+        <field name="[tableau_regional_kpi].[CostPerExposure]" caption="CostPerExposure" datatype="real" />
+        <field name="[tableau_regional_kpi].[PolicyCount]" caption="PolicyCount" datatype="integer" />
+      </field-info>
+    </worksheet>
+    <worksheet name="Recommendations_Text">
+      <view alignment="top" class="viewsheet" enable-summary="true" name="Recommendations_Text">
+      </view>
+      <field-info>
+      </field-info>
+    </worksheet>
+    <worksheet name="Dashboard_Summary_Text">
+      <view alignment="top" class="viewsheet" enable-summary="true" name="Dashboard_Summary_Text">
+      </view>
+      <field-info>
+      </field-info>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name="Page 1 - Executive Portfolio Overview">
+      <size maxheight="900" maxwidth="1200" minheight="900" minwidth="1200" />
+      <zone h="60" is-spatial-root="true" r="1200" x="0" y="0" w="1200">
+        <text val="INSURANCE CLAIMS &amp; PORTFOLIO RISK DASHBOARD
+French Motor Third-Party Liability (freMTPL2) | 678,013 Policies" />
+      </zone>
+      <zone h="120" is-spatial-root="true" r="1200" x="0" y="60" w="1200">
+        <worksheet name="KPI_Cards" />
+      </zone>
+      <zone h="360" is-spatial-root="true" r="600" x="0" y="180" w="600">
+        <worksheet name="Regional_Frequency_Bar" />
+      </zone>
+      <zone h="360" is-spatial-root="true" r="1200" x="600" y="180" w="600">
+        <worksheet name="Regional_Severity_Bar" />
+      </zone>
+      <zone h="180" is-spatial-root="true" r="1200" x="0" y="540" w="1200">
+        <worksheet name="Dashboard_Summary_Text" />
+      </zone>
+      <zone h="180" is-spatial-root="true" r="1200" x="0" y="720" w="1200">
+        <worksheet name="Highlight_Table" />
+      </zone>
+    </dashboard>
+    <dashboard name="Page 2 - Claims &amp; Risk Segments">
+      <size maxheight="900" maxwidth="1200" minheight="900" minwidth="1200" />
+      <zone h="60" is-spatial-root="true" r="1200" x="0" y="0" w="1200">
+        <text val="CLAIMS &amp; RISK SEGMENTS — Driver, Vehicle &amp; Region Patterns" />
+      </zone>
+      <zone h="280" is-spatial-root="true" r="400" x="0" y="60" w="400">
+        <worksheet name="Driver_Age_Frequency" />
+      </zone>
+      <zone h="280" is-spatial-root="true" r="800" x="400" y="60" w="400">
+        <worksheet name="Driver_Age_Severity" />
+      </zone>
+      <zone h="280" is-spatial-root="true" r="1200" x="800" y="60" w="400">
+        <worksheet name="Vehicle_Age_Frequency" />
+      </zone>
+      <zone h="420" is-spatial-root="true" r="1200" x="0" y="340" w="1200">
+        <worksheet name="Freq_vs_Severity_Scatter" />
+      </zone>
+      <zone h="140" is-spatial-root="true" r="1200" x="0" y="760" w="1200">
+        <worksheet name="Segment_Freq_vs_Sev" />
+      </zone>
+    </dashboard>
+    <dashboard name="Page 3 - Claim Cost Concentration">
+      <size maxheight="900" maxwidth="1200" minheight="900" minwidth="1200" />
+      <zone h="60" is-spatial-root="true" r="1200" x="0" y="0" w="1200">
+        <text val="CLAIM COST CONCENTRATION &amp; BUSINESS RECOMMENDATIONS" />
+      </zone>
+      <zone h="400" is-spatial-root="true" r="800" x="0" y="60" w="800">
+        <worksheet name="Pareto_Chart" />
+      </zone>
+      <zone h="400" is-spatial-root="true" r="1200" x="800" y="60" w="400">
+        <worksheet name="Top_Claims_Table" />
+      </zone>
+      <zone h="200" is-spatial-root="true" r="1200" x="0" y="460" w="1200">
+        <worksheet name="Cost_Distribution_Region" />
+      </zone>
+      <zone h="240" is-spatial-root="true" r="1200" x="0" y="660" w="1200">
+        <worksheet name="Recommendations_Text" />
+      </zone>
+    </dashboard>
+  </dashboards>
+</workbook>

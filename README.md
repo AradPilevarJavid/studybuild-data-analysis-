@@ -194,7 +194,8 @@ insurance-claims-dashboard/
 │   └── q7_executive_dashboard_preview.png       # Dashboard layout preview
 ├── report/
 │   └── business_summary.md                      # Business summary
-└── tableau/                                     # Tableau workbook (build using exported CSVs)
+└── tableau/
+    └── insurance_claims_dashboard.twb          # Tableau workbook (3-page dashboard)
 ```
 
 ---
@@ -223,7 +224,16 @@ insurance-claims-dashboard/
    - Generate matplotlib preview charts in `figures/` (design specifications)
    - Export Tableau-ready CSVs to `data_/processed/`
 
-5. Open the processed CSVs in Tableau Public or Tableau Desktop to build the interactive 3-page dashboard (see Q7 in notebook for chart specifications).
+5. Open the Tableau workbook:
+   ```bash
+   tableau/insurance_claims_dashboard.twb
+   ```
+   The workbook contains 3 dashboard pages with all data connections pre-configured:
+   - **Page 1:** Executive Portfolio Overview (KPI cards, regional bar charts, filters)
+   - **Page 2:** Claims & Risk Segments (driver/vehicle patterns, frequency vs severity)
+   - **Page 3:** Claim Cost Concentration (Pareto chart, top claims, recommendations)
+
+   Alternatively, open the processed CSVs in Tableau Public/Desktop to build from scratch.
 
 ---
 
