@@ -182,35 +182,35 @@ The analysis notebook (`notebooks/analysis.ipynb`) covers:
 
 ```
 insurance-claims-dashboard/
-├── README.md                                    # This file
-├── requirements.txt                             # Python dependencies
-├── StudyBuild_DataAnalysisBI_Project01_*.pdf    # Project requirements
-├── project_instructions.pdf                     # Project instructions
+├── README.md
+├── requirements.txt                          
+├── StudyBuild_DataAnalysisBI_Project01_*.pdf  
+├── project_instructions.pdf                  
 ├── notebooks/
-│   └── analysis.ipynb                           # Full analysis notebook (Q1-Q8)
+│   └── analysis.ipynb     
 ├── data/
-│   ├── README.md                                # Data documentation
+│   ├── README.md  
 │   ├── raw/
-│   │   ├── freMTPL2freq.csv                     # Raw frequency data
-│   │   └── freMTPL2sev.csv                      # Raw severity data
+│   │   ├── freMTPL2freq.csv                  
+│   │   └── freMTPL2sev.csv                    
 │   └── processed/
-│       ├── tableau_policy_level.csv             # Policy-level data for Tableau
-│       ├── tableau_regional_kpi.csv             # Regional KPI summary
-│       ├── tableau_segment_analysis.csv         # Segment-level analysis
-│       ├── tableau_individual_claims.csv        # Claims for Pareto analysis
-│       └── tableau_portfolio_kpi.csv            # Portfolio KPI summary
-├── figures/                                     # Matplotlib preview charts (design specs for Tableau)
-│   ├── q2_regional_comparison.png               # Regional KPI comparison
-│   ├── q3_segment_patterns.png                  # Segment analysis charts
-│   ├── q4_frequency_vs_severity.png             # Scatter/quadrant view
-│   ├── q5_pareto_analysis.png                   # Pareto cost concentration
-│   ├── q6_claim_distribution.png                # Claim amount distribution
-│   └── q7_executive_dashboard_preview.png       # Dashboard layout preview
+│       ├── tableau_policy_level.csv           
+│       ├── tableau_regional_kpi.csv          
+│       ├── tableau_segment_analysis.csv        
+│       ├── tableau_individual_claims.csv       
+│       └── tableau_portfolio_kpi.csv           
+├── figures/                                  
+│   ├── q2_regional_comparison.png             
+│   ├── q3_segment_patterns.png               
+│   ├── q4_frequency_vs_severity.png           
+│   ├── q5_pareto_analysis.png                 
+│   ├── q6_claim_distribution.png               
+│   └── q7_executive_dashboard_preview.png    
 ├── report/
-│   └── business_summary.md                      # Business summary
+│   └── business_summary.md                     
 └── tableau/
-    ├── insurance_claims_dashboard.twb          # Schema scaffold (see BUILD_INSTRUCTIONS.md)
-    └── BUILD_INSTRUCTIONS.md                   # Step-by-step Tableau Desktop build guide
+    ├── insurance_claims_dashboard.twb      
+    └── BUILD_INSTRUCTIONS.md                  
 ```
 
 ---
