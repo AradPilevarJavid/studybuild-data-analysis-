@@ -235,13 +235,6 @@ insurance_final/
 
 ---
 
-## Data Source
-
-> Dutang, C. (2023). CASdatasets: Insurance Datasets. R package.
-> https://dutangc.github.io/CASdatasets/reference/freMTPL.html
-
----
-
 Big thanks to the StudyBuild community for preparing the projects, sharing knowledge, and giving constructive feedback.
 
 If you are interested in joining the community, feel free to message me on [Telegram](https://t.me/nerdysamurai).
